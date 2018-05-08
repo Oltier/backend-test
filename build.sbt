@@ -20,9 +20,9 @@ libraryDependencies ++= Seq(
 //  "junit"          % "junit"     % "4.9"   withSources(),
 //  "org.scalatest" %% "scalatest" % "1.6.1" withSources(),
 //  "org.specs2"    %% "specs2"    % "1.5"   withSources()
-//  "org.specs2" %% "specs2" % "1.12.4" % Test,
-//  "org.scalactic" %% "scalactic" % "3.0.5",
-//  "org.scalatest" %% "scalatest" % "3.0.5" % "test"
+  //"org.specs2" %% "specs2" % "1.12.4" % Test,
+  "org.scalactic" %% "scalactic" % "3.0.5",
+  "org.scalatest" %% "scalatest" % "3.0.5" % "test"
 )
 
 mainClass in assembly := Some("ciklum.backend.test.Entry")
