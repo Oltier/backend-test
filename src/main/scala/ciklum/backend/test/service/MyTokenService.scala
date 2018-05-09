@@ -1,23 +1,11 @@
-package ciklum.backend.test
+package ciklum.backend.test.service
 
-import akka.actor.Actor
-import akka.event.Logging
+import ciklum.backend.test.{Credentials, User, UserToken}
 import org.joda.time.DateTime
 
-class TokenIssueActor extends Actor with SyncTokenService {
+class MyTokenService extends SyncTokenService {
+
   val format = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-  val log = Logging(context.system, this)
-
-  def receive = {
-    case c: Credentials => {
-      println("got mesasge " + c)
-      val token = requestToken(c)
-      sender ! token
-    }
-    case _      ⇒ log.info("received unknown message")
-  }
-
-
 
   override protected def authenticate(credentials: Credentials): User = {
     User(credentials.username)

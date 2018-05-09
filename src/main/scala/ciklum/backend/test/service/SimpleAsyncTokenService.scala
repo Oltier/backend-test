@@ -1,4 +1,6 @@
-package ciklum.backend.test
+package ciklum.backend.test.service
+
+import ciklum.backend.test.{Credentials, UserToken}
 
 import scala.concurrent.Future
 

@@ -1,9 +1,10 @@
-package ciklum.backend.test
+package ciklum.backend.test.actor
 
 import akka.actor.{Actor, Props}
 import akka.event.Logging
 import akka.pattern.ask
 import akka.util.Timeout
+import ciklum.backend.test.Credentials
 
 import scala.concurrent.ExecutionContext
 import scala.concurrent.duration._

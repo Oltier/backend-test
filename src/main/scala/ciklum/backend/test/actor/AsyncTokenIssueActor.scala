@@ -1,7 +1,9 @@
-package ciklum.backend.test
+package ciklum.backend.test.actor
 
 import akka.actor.Actor
 import akka.event.Logging
+import ciklum.backend.test.service.AsyncTokenService
+import ciklum.backend.test.{Credentials, User, UserToken}
 import org.joda.time.DateTime
 
 import scala.concurrent.{ExecutionContext, Future}
